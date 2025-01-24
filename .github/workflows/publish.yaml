@@ -16,7 +16,4 @@ jobs:
         with:
           version: latest
       - run: pnpm install --frozen-lockfile
-      - run: pnpm compile:prod
-      - run: pnpm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      - run: pnpm release
